@@ -1,0 +1,98 @@
+\hypertarget{classdevice_class}{}\doxysection{device\+Class Class Reference}
+\label{classdevice_class}\index{deviceClass@{deviceClass}}
+
+
+The \mbox{\hyperlink{classdevice_class}{device\+Class}} class.  
+
+
+
+
+{\ttfamily \#include $<$device\+Class.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdevice_class_a27b103bcd7a4cfcf2ac6ced8a6977e53}\label{classdevice_class_a27b103bcd7a4cfcf2ac6ced8a6977e53}} 
+\mbox{\hyperlink{classdevice_class_a27b103bcd7a4cfcf2ac6ced8a6977e53}{device\+Class}} (QWidget $\ast$parent)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classdevice_class_a27b103bcd7a4cfcf2ac6ced8a6977e53}{device\+Class\+::device\+Class}} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdevice_class_af6335571490cbb8328b034c4b79a448c}{send\+Message\+To\+Device}} (QString message)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classdevice_class_af6335571490cbb8328b034c4b79a448c}{device\+Class\+::send\+Message\+To\+Device}} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdevice_class_a31c2ea0c89a1a99e7f84a1e911ac83e4}{is\+Device\+Open}} ()
+\begin{DoxyCompactList}\small\item\em device\+Class\+::set\+UARTConnection \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdevice_class_ad83146a3af499eff3ab7df846dcfcc25}\label{classdevice_class_ad83146a3af499eff3ab7df846dcfcc25}} 
+void \mbox{\hyperlink{classdevice_class_ad83146a3af499eff3ab7df846dcfcc25}{read\+Data}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classdevice_class_ad83146a3af499eff3ab7df846dcfcc25}{device\+Class\+::read\+Data}} Read data from UART and change accelerometer\+Data\+\_\+x/y/z value \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdevice_class_ac0362df4ee33a3e4daa61df3cd4f4c9a}\label{classdevice_class_ac0362df4ee33a3e4daa61df3cd4f4c9a}} 
+int8\+\_\+t {\bfseries get\+AccelerometerX} ()
+\item 
+\mbox{\Hypertarget{classdevice_class_af05059991aca05c19ae4fc49d816db22}\label{classdevice_class_af05059991aca05c19ae4fc49d816db22}} 
+int8\+\_\+t {\bfseries get\+AccelerometerY} ()
+\item 
+\mbox{\Hypertarget{classdevice_class_abe36f87ebbb0b717e062f45c5059282a}\label{classdevice_class_abe36f87ebbb0b717e062f45c5059282a}} 
+int8\+\_\+t {\bfseries get\+AccelerometerZ} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classdevice_class}{device\+Class}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdevice_class_a31c2ea0c89a1a99e7f84a1e911ac83e4}\label{classdevice_class_a31c2ea0c89a1a99e7f84a1e911ac83e4}} 
+\index{deviceClass@{deviceClass}!isDeviceOpen@{isDeviceOpen}}
+\index{isDeviceOpen@{isDeviceOpen}!deviceClass@{deviceClass}}
+\doxysubsubsection{\texorpdfstring{isDeviceOpen()}{isDeviceOpen()}}
+{\footnotesize\ttfamily bool device\+Class\+::is\+Device\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+device\+Class\+::set\+UARTConnection 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+Name} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if port has been opened, connection is working \\
+\hline
+{\em false} & if port can\textquotesingle{}t be opened bool set\+UARTConnection(\+QString port\+Name);\\
+\hline
+\end{DoxyRetVals}
+/$\ast$$\ast$
+
+\mbox{\hyperlink{classdevice_class_a31c2ea0c89a1a99e7f84a1e911ac83e4}{device\+Class\+::is\+Device\+Open}} 
+\begin{DoxyRetVals}{Return values}
+{\em true} & if connection is open \\
+\hline
+{\em false} & if connection is closed \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{classdevice_class_af6335571490cbb8328b034c4b79a448c}\label{classdevice_class_af6335571490cbb8328b034c4b79a448c}} 
+\index{deviceClass@{deviceClass}!sendMessageToDevice@{sendMessageToDevice}}
+\index{sendMessageToDevice@{sendMessageToDevice}!deviceClass@{deviceClass}}
+\doxysubsubsection{\texorpdfstring{sendMessageToDevice()}{sendMessageToDevice()}}
+{\footnotesize\ttfamily bool device\+Class\+::send\+Message\+To\+Device (\begin{DoxyParamCaption}\item[{QString}]{message }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classdevice_class_af6335571490cbb8328b034c4b79a448c}{device\+Class\+::send\+Message\+To\+Device}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & if the message has been sent successfully \\
+\hline
+{\em false} & if no device detected \\
+\hline
+\end{DoxyRetVals}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{device_class_8h}{device\+Class.\+h}}\item 
+device\+Class.\+cpp\end{DoxyCompactItemize}
