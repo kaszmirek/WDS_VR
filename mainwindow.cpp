@@ -24,9 +24,9 @@ MainWindow::MainWindow(QWidget *parent)
     timer->start(10);
 
     ui->quickWidget->setSource(QUrl(QStringLiteral( "qrc:/main.qml")));
-    ui->quickWidget->engine()->rootContext()->setContextProperty("_accX", 0);
-    ui->quickWidget->engine()->rootContext()->setContextProperty("_accY", 0);
-    ui->quickWidget->engine()->rootContext()->setContextProperty("_accZ", 0);
+    ui->quickWidget->engine()->rootContext()->setContextProperty("Q1", 0);
+    ui->quickWidget->engine()->rootContext()->setContextProperty("Q2", 0);
+    ui->quickWidget->engine()->rootContext()->setContextProperty("Q3", 0);
 
 }
 
@@ -105,10 +105,10 @@ void MainWindow::on_pushButton_disconnect_clicked()
 void MainWindow::fromDeviceToProgram_timer(){
     if(device.isDeviceOpen()){
         device.readData();
-        QVector3D data = device.getAccelerometerData();
-        ui->quickWidget->engine()->rootContext()->setContextProperty("_accX", data.x());
-        ui->quickWidget->engine()->rootContext()->setContextProperty("_accY", data.y());
-        ui->quickWidget->engine()->rootContext()->setContextProperty("_accZ", data.z());
+        QVector3D data = device.getImuData();
+        ui->quickWidget->engine()->rootContext()->setContextProperty("Q1", data.x());
+        ui->quickWidget->engine()->rootContext()->setContextProperty("Q2", data.y());
+        ui->quickWidget->engine()->rootContext()->setContextProperty("Q3", data.z());
         qDebug() <<  data;
   }
 }

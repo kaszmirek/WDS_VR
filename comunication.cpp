@@ -31,10 +31,10 @@ void communication::readData(){
     QString line = this->device->readLine();
     QString terminator = "\r";
     int pos = line.lastIndexOf(terminator);
-    accelerometerData.setX((line.left(pos).split("\t")[0].toFloat()));
-    accelerometerData.setY((line.left(pos).split("\t")[1].toFloat()));
-    accelerometerData.setZ((line.left(pos).split("\t")[2].toFloat()));
+    imuData.setX((line.left(pos).split("\t")[0].toFloat()));
+    imuData.setY((line.left(pos).split("\t")[1].toFloat()));
+    imuData.setZ((line.left(pos).split("\t")[2].toFloat()));
     }
 }
 
-QVector3D communication::getAccelerometerData(){return this->accelerometerData;}
+QVector3D communication::getImuData(){return this->imuData;}

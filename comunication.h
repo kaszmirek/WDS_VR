@@ -40,16 +40,16 @@ public:
     bool isDeviceOpen();
 
     /**
-     * @brief Read data from UART and change accelerometerData_x/y/z value
+     * @brief Read data from UART and change imuData_q1/q2/q3 value
      */
     void readData();
 
-    QVector3D getAccelerometerData();
+    QVector3D getImuData();
 
 private:
     QSerialPort *device;
     QWidget *parent;
-    QVector3D accelerometerData;
+    QVector3D imuData;
 };
 
 #endif // COMUNICATION_H
